@@ -1,9 +1,10 @@
 import React from "react";
+import StartPageContainer from "../container/StartPageContainer";
 
 const HomeKeeper: React.FC = () => {
   return (
     <>
-      <span>홈키퍼</span>
+      <StartPageContainer />
     </>
   );
 };
