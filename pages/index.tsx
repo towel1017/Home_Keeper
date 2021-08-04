@@ -1,6 +1,6 @@
 import React from "react";
 
-const Rank: React.FC = () => {
+const HomeKeeper: React.FC = () => {
   return (
     <>
       <span>홈키퍼</span>
@@ -8,4 +8,4 @@ const Rank: React.FC = () => {
   );
 };
 
-export default Rank;
+export default HomeKeeper;
