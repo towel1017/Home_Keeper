@@ -1,4 +1,4 @@
 export default interface ISvg {
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
 }
