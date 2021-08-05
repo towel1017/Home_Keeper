@@ -14,4 +14,10 @@ describe("StartPage tests", () => {
 
     expect(container).toHaveTextContent("우리집의 작은 경제 지킴이");
   });
+
+  it("After 2 seconds Startpage -> MainPage", () => {
+    setTimeout(() => {
+      expect(Router.push).toHaveBeenCalledWith("/main");
+    }, 2000);
+  });
 });
