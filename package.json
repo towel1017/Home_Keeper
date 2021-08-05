@@ -19,5 +19,17 @@
     "dev": "next",
     "test": "jest",
     "test:watch": "jest --watchAll"
-  }
+  },
+  "moduleDirectories": [
+    "node_modules",
+    "assets",
+    "components",
+    "container",
+    "hooks",
+    "model",
+    "pages",
+    "style",
+    "test",
+    "util"
+  ]
 }

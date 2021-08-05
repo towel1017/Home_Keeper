@@ -5,4 +5,7 @@ module.exports = {
     "^@pages(.*)$": "<rootDir>/pages$1",
     "^@hooks(.*)$": "<rootDir>/hooks$1",
   },
+  modulePaths: [
+    "<rootDir>"
+  ],
 };
