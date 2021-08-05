@@ -1,9 +1,12 @@
+import { Header } from "@components/index";
 import React from "react";
 
-interface Props {}
-
-const main = (props: Props) => {
-  return <div></div>;
+const main: React.FC = () => {
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default main;
