@@ -1,9 +1,12 @@
+import { HeaderContainer } from "../../container";
 import React from "react";
 
-interface Props {}
-
-const main = (props: Props) => {
-  return <div></div>;
+const Main: React.FC = () => {
+  return (
+    <>
+      <HeaderContainer />
+    </>
+  );
 };
 
-export default main;
+export default Main;
