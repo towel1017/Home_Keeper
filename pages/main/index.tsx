@@ -1,12 +1,12 @@
-import { Header } from "@components/index";
+import { HeaderContainer } from "../../container";
 import React from "react";
 
-const main: React.FC = () => {
+const Main: React.FC = () => {
   return (
     <>
-      <Header />
+      <HeaderContainer />
     </>
   );
 };
 
-export default main;
+export default Main;
