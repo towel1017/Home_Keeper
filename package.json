@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "next",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "tw": "jest --watchAll"
   },
   "moduleDirectories": [
     "node_modules",
