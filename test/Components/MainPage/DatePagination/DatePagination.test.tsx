@@ -4,33 +4,21 @@ import { render } from "../../../test-utils";
 
 import DatePagination from "@components/DatePagination";
 
-describe("DatePagination tests", () => {
+describe("DatePagination UI render tests", () => {
   const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const { container } = render(<DatePagination />);
   const today = new Date();
 
-  it("Date renders year texts", () => {
-    const year = today.getFullYear().toString();
-    expect(container).toHaveTextContent(year);
-  });
+  const year = today.getFullYear();
+  const month = today.getMonth();
+  const day = today.getDate();
 
-  it("Date renders month texts", () => {
-    const month = monthNames[today.getMonth()];
-    expect(container).toHaveTextContent(month);
-  });
+  it("Date renders date texts", () => {
+    const { container } = render(<DatePagination year={year} month={month} day={day} />);
 
-  it("Date renders prev month texts", () => {
-    const prevMonth = monthNames[today.getMonth() - 1];
-    expect(container).toHaveTextContent(prevMonth);
-  });
-
-  it("Date renders next month texts", () => {
-    const nextMonth = monthNames[today.getMonth() + 1];
-    expect(container).toHaveTextContent(nextMonth);
-  });
-
-  it("Date renders day texts", () => {
-    const day = today.getDate().toString();
-    expect(container).toHaveTextContent(day);
+    expect(container.getElementsByTagName("h2")[0].textContent).toEqual(year.toString());
+    expect(container).toHaveTextContent(monthNames[month]);
+    expect(container).toHaveTextContent(monthNames[month - 1]);
+    expect(container).toHaveTextContent(monthNames[month + 1]);
+    expect(container).toHaveTextContent(day.toString());
   });
 });
